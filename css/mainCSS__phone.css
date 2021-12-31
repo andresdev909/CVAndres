@@ -1,0 +1,285 @@
+
+
+/*Barra de navegacion*/
+.header__menu
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(/assets/menu/menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px;
+}
+.menu__colapsed
+{
+    display: none;/*Cambio con none para ocultar y flex para ver*/
+    flex-direction: column;
+    position: absolute;
+    background-color: bisque;
+    width: 100vw;
+    height: 55vh;
+}
+.menu__colapsed--item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    margin: 5px 5px 0px 5px;
+    border-radius: 10px;
+    height: 40px;
+}
+.close
+{
+    width: 40px;
+    height: 40px;
+    background-image: url(/assets/Menu/close.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px 5px 0px 5px;
+}
+
+/*Seccion de Información*/
+.info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 320px;
+    max-width: 500px;
+    height: 400px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgba(193,217,235,1) 35%, rgba(24,146,205,1) 80%, rgba(28,110,208,1) 97%);
+}
+.info__name
+{
+    color: floralwhite;
+    text-align: center;
+    font-size: 2rem;
+    min-width: 300px;
+    max-width: 450px;
+}
+.info__social
+{
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-width: 300px;
+    max-width: 450px;
+    height: auto;
+}
+.social__item
+{
+    width: 2rem;
+    height: 2rem;
+    margin: 7px 7px 7px 7px;
+}
+.telegram
+{
+    background-image: url(/assets/Redes/telegram.png);
+}
+.whatsapp
+{
+    background-image: url(/assets/Redes/whatsapp.png);
+}
+.github
+{
+    background-image: url(/assets/Redes/github.png);
+}
+.instagram
+{
+    background-image: url(/assets/Redes/instagram.png);
+}
+.linkedin
+{
+    background-image: url(/assets/Redes/linkedin.png);
+}
+.telegram, .whatsapp, .github, .instagram, .linkedin
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Resumen*/
+.resume
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+}
+.resume__element
+{
+    min-width: auto;
+    margin: 20px;
+}
+.resume__element > h2
+{
+    width: 200px;
+    font-size: 40px;
+    margin: 20px 0px;
+}
+.resume__element > p
+{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.resume__photo
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(/assets/Hugo/programmer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 30px 0px;
+}
+
+/*Sobre mi*/
+.about
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 320px;
+    height: auto;
+    background-color: black;
+}
+.about__element
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 200px;
+    margin: 10px;
+}
+.about__element > p
+{
+    margin: 15px 0px 0px 0px;
+    font-size: 20px ;
+    color: white;
+}
+.element__content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 135px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.element__content__skills
+{
+    background-image: url(/assets/Hugo/skills.png);
+}
+.element__content__lang
+{
+    background-image: url(/assets/Hugo/chat.png);
+}
+.element__content__exp
+{
+    background-image: url(/assets/Hugo/suitcase.png);
+}
+.element__content__proy
+{
+    background-image: url(/assets/Hugo/idea.png);
+}
+.element__content__skills, .element__content__lang, .element__content__exp, .element__content__proy
+{
+    width: 90px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Habilidades*/
+.skills
+{
+    min-width: 320px;
+
+}
+.skills__desc > h2
+{
+    margin: 20px;
+    font-size: 40px;
+}
+.skills__item
+{
+    width: 300px;
+    margin: 0px 10px 10px 10px;
+}
+.skills__item > h3
+{
+    text-align: center;
+    font-size: 15px;
+    margin: 0px 0px 10px 10px;
+}
+.item__cont
+{
+    display: flex;
+
+}
+.skills__item__prog
+{
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.percen--50
+{
+    width: 125px;
+}
+.percen--70
+{
+    width: 250px;
+}
+.item__cont > p
+{
+    margin: 0px 0px 0px 10px;
+}
+/*Lenguaje*/
+.lang
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 320px;
+    max-width: 500px;
+
+}
+.lang__title
+{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 10px 20px;
+}
+.lang__item
+{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px 20px 20px 20px;
+}
+.lang__item > h3, p
+{
+    width: 90%;
+    margin: 5px 8px;
+    text-align: center;
+}
+/*Experiencia*/
+.experience
+{
+    
+}
