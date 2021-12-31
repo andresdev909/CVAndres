@@ -281,5 +281,14 @@
 /*Experiencia*/
 .experience
 {
+    min-width: 300px;
+    max-width: 500px;
+}
+.experience__title
+{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 10px 20px;
     
 }
