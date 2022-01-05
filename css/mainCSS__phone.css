@@ -253,14 +253,14 @@
     flex-wrap: wrap;
     justify-content: center;
     min-width: 320px;
-    max-width: 500px;
+    
 
 }
 .lang__title
 {
     display: flex;
     justify-content: center;
-    width: auto;
+    width: 100%;
     margin: 10px 20px;
 }
 .lang__item
@@ -278,11 +278,10 @@
     margin: 5px 8px;
     text-align: center;
 }
-/*Experiencia*/
-.experience
+/*Seccion de Experiencia*/
+.experience /*Seccion Contenedora item experiencia laboral*/
 {
     min-width: 300px;
-    max-width: 500px;
 }
 .experience__title
 {
@@ -291,4 +290,10 @@
     width: auto;
     margin: 10px 20px;
     
+}
+.experience__tarjet /*Definimoslaspropiedades dela tarjeta de experiencias*/
+{
+    display: flex;
+    width: 300px;
+
 }
