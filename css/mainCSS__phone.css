@@ -3,6 +3,7 @@
 /*Barra de navegacion*/
 .header__menu
 {
+    width: 100vw;
     display: flex;
     justify-content: flex-end;
 }
@@ -20,30 +21,41 @@
     display: none;/*Cambio con none para ocultar y flex para ver*/
     flex-direction: column;
     position: absolute;
-    background-color: bisque;
+    background-color: rgba(255, 255, 255, 0.493);
     width: 100vw;
-    height: 55vh;
+    height: auto;
+}
+.menu__colapsed > li > a
+{
+    color: white;
 }
 .menu__colapsed--item
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
-    margin: 5px 5px 0px 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px 10px 5px 10px;
     border-radius: 10px;
     height: 40px;
 }
+.last
+{
+    margin-bottom: 10px;
+}
 .close
 {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
     background-image: url(/assets/Menu/close.png);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 5px 5px 0px 5px;
 }
-
+.main-wrapper
+{
+    width: 100vw;
+}
 /*Seccion de Información*/
 .info
 {
@@ -51,19 +63,18 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-width: 320px;
-    max-width: 500px;
-    height: 400px;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgba(193,217,235,1) 35%, rgba(24,146,205,1) 80%, rgba(28,110,208,1) 97%);
+    width: 100%;
+    height: 200px;
 }
 .info__name
 {
     color: floralwhite;
     text-align: center;
     font-size: 2rem;
-    min-width: 300px;
-    max-width: 450px;
+    width: 100%;
+    margin: 0px 20px;
+    word-wrap: break-word;
+
 }
 .info__social
 {
@@ -71,8 +82,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-width: 300px;
-    max-width: 450px;
+    width: 100%;
     height: auto;
 }
 .social__item
@@ -107,30 +117,36 @@
     background-size: cover;
 }
 
-/*Resumen*/
+/* Seccion de Resumen*/
 .resume
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 320px;
+    width: 100vw;
 }
 .resume__element
 {
-    min-width: auto;
-    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 320px;
+    max-width: 750px;
 }
 .resume__element > h2
 {
-    width: 200px;
+    width: 100%;
     font-size: 40px;
-    margin: 20px 0px;
+    margin-left: 20px;
 }
 .resume__element > p
 {
-    padding: 10px;
+    width: calc(100% - 20px);
     border: 1px solid black;
     border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: justify;
 }
 .resume__photo
 {
@@ -143,13 +159,13 @@
     margin: 30px 0px;
 }
 
-/*Sobre mi*/
+/*Seccion Sobre mi*/
 .about
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-width: 320px;
+    width: 100vw;
     height: auto;
     background-color: black;
 }
@@ -157,15 +173,9 @@
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 200px;
-    margin: 10px;
-}
-.about__element > p
-{
-    margin: 15px 0px 0px 0px;
-    font-size: 20px ;
-    color: white;
+    margin: 20px 0px;
 }
 .element__content
 {
@@ -177,6 +187,16 @@
     border: 3px solid white;
     border-radius: 50%;
 }
+.about__element > p
+{
+    margin: 8px 0px 0px 0px;
+    font-size: 20px ;
+    color: white;
+}
+.element__content__study
+{
+    background-image: url(/assets/Hugo/magistrate.png);
+}
 .element__content__skills
 {
     background-image: url(/assets/Hugo/skills.png);
@@ -184,6 +204,10 @@
 .element__content__lang
 {
     background-image: url(/assets/Hugo/chat.png);
+}
+.element__content__cert
+{
+    background-image: url(/assets/Hugo/certificate.png);
 }
 .element__content__exp
 {
@@ -193,66 +217,154 @@
 {
     background-image: url(/assets/Hugo/idea.png);
 }
-.element__content__skills, .element__content__lang, .element__content__exp, .element__content__proy
+.element__content__study, .element__content__skills, .element__content__lang, .element__content__cert, .element__content__exp, .element__content__proy
 {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/*Habilidades*/
+/*Seccion de Estudios*/
+.degrees
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+.degree__title
+{
+    width: 100vw;
+}
+.degree__title > h2
+{
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.degree__tarjet
+{
+    width: 300px;
+    padding: 20px;
+    margin: 20px 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+.degree__tarjet > h3
+{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+.degree__tarjet > p
+{
+    width: 100%;
+    text-align: left;
+}
+/*Seccion de Habilidades*/
 .skills
 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     min-width: 320px;
-
 }
-.skills__desc > h2
+.skills__title
 {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    border: 1px solid white;
+}
+.skills__title > h2
+{
     font-size: 40px;
+}
+.skills__tarjet
+{
+    min-width: 280px;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+}
+.tarjet__title
+{
+    width: 100%;
+    border: 1px solid red;
+}
+.tarjet__title > p
+{
+    color: white;
+    font-size: 20px;
 }
 .skills__item
 {
-    width: 300px;
-    margin: 0px 10px 10px 10px;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
 }
 .skills__item > h3
 {
-    text-align: center;
+    text-align: left;
     font-size: 15px;
     margin: 0px 0px 10px 10px;
 }
 .item__cont
 {
     display: flex;
-
+    flex-wrap: wrap;
+    width: 100%;
 }
 .skills__item__prog
 {
+    width: 80%;
     height: 20px;
     border-radius: 10px;
     border: 1px solid black;
 }
-.percen--50
-{
-    width: 125px;
-}
-.percen--70
-{
-    width: 250px;
-}
 .item__cont > p
 {
+    width: 10px;
     margin: 0px 0px 0px 10px;
+}
+/*Seccion de Estudios complementarios*/
+.certification
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+}
+.certification__title
+{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.certification__title > h2
+{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.certification__tarjet
+{
+    min-width: 300px;
+    max-width: 750px;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 10px;
 }
 /*Lenguaje*/
 .lang
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    min-width: 320px;
+    justify-content: space-evenly;
+    width: 100vw;
     
 
 }
@@ -262,6 +374,11 @@
     justify-content: center;
     width: 100%;
     margin: 10px 20px;
+}
+.lang__title > h2
+{
+    color: white;
+    font-size: 40px;
 }
 .lang__item
 {
@@ -278,22 +395,50 @@
     margin: 5px 8px;
     text-align: center;
 }
-/*Seccion de Experiencia*/
+/*Seccion de Experiencia Laboral*/
 .experience /*Seccion Contenedora item experiencia laboral*/
 {
-    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100vw;
 }
 .experience__title
 {
     display: flex;
     justify-content: center;
-    width: auto;
-    margin: 10px 20px;
-    
+    width: 100vw;
 }
+.experience__title > h2
+{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+} 
+/*Div de tarjeta*/
 .experience__tarjet /*Definimoslaspropiedades dela tarjeta de experiencias*/
 {
-    display: flex;
     width: 300px;
-
+    border: 1px solid white;
+}
+.tarjet__info
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 20px);
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 10px;
+}
+.tarjet__info > h3
+{
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.tarjet__info > p
+{
+    width: 100%;
+    text-align: left;
 }

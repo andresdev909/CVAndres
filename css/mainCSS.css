@@ -5,4 +5,11 @@
 	text-decoration: none;
 	border: none;
 	outline: none;
+	box-sizing: border-box;
+}
+body
+{
+	width: 100vw;
+	background: rgb(55,114,237);
+	background: linear-gradient(0deg, rgba(55,114,237,1) 9%, rgba(29,72,161,1) 91%);
 }

@@ -14,20 +14,20 @@
         <nav class="header__menu">
             <span class="menu"></span>
 
-            <div class="menu__colapsed">
-                <span class="close"></span>
-                <a class="menu__colapsed--item" href="#">Sobre mi</a>
-                <a class="menu__colapsed--item" href="#">Habilidades</a>
-                <a class="menu__colapsed--item" href="#">Idiomas</a>
-                <a class="menu__colapsed--item" href="#">Experiencia</a>
-                <a class="menu__colapsed--item" href="#">Proyectos</a>
-            </div>
+            <ul class="menu__colapsed">
+                <li><div class="close"></div></li>
+                <li><a class="menu__colapsed--item" href="#">Sobre mi</a></li>
+                <li><a class="menu__colapsed--item" href="#">Habilidades</a></li>
+                <li><a class="menu__colapsed--item" href="#">Idiomas</a></li>
+                <li><a class="menu__colapsed--item" href="#">Experiencia</a></li>
+                <li><a class="menu__colapsed--item last" href="#">Proyectos</a></li>
+            </ul>
         </nav>
 
     </header>
 
     <main class="main-wrapper">
-
+<!-- Seccion de bienvenida con informacion de contacto-->
         <section id="welcome-section" class="info">
             <article class="info__name">
                 <h1>Hugo Andres Cabrera Lagos</h1>
@@ -51,7 +51,7 @@
                 </a>
             </article>
         </section>
-
+<!-- Seccion de resumen sobre mi-->
         <section class="resume">
             <article class="resume__element">
                 <h2>Sobre mi</h2>
@@ -61,8 +61,17 @@
 
             <div class="resume__photo"></div>
         </section>
-
+<!--Seccion sobre mi-->
         <section class="about">
+            <article class="about__element">
+                <div class="element__content">
+                    <a href="#">
+                        <div class="element__content__study"></div>
+                    </a>
+                </div>
+                <p>Estudios</p>
+            </article>
+
             <article class="about__element">
                 <div class="element__content">
                     <a href="#">
@@ -78,7 +87,16 @@
                         <div class="element__content__lang"></div>
                     </a>
                 </div>
-                <p>Lenguaje</p>
+                <p>Idiomas</p>
+            </article>
+
+            <article class="about__element">
+                <div class="element__content">
+                    <a href="#">
+                        <div class="element__content__cert"></div>
+                    </a>
+                </div>
+                <p>Estudios complementarios</p>
             </article>
 
             <article class="about__element">
@@ -99,77 +117,116 @@
                 <p>Proyectos</p>
             </article>
         </section>
+<!--Seccion de Estudios-->
+        <section class="degrees">
+            <article class="degree__title">
+                <h2>Estudios</h2>
+            </article>
 
+            <article class="degree__tarjet">
+                <h3>Universidad</h3>
+                <p>Corporacion universitaria autonomade nariño</p>
+                <p>Ingeniero electronico</p>
+            </article>
+
+            <article class="degree__tarjet">
+                <h3>Mision TIC 2022</h3>
+                <p>Universidad de Antioquia</p>
+                <p>Desarrollo web</p>
+            </article>
+        </section>
+<!-- Seccion de Habilidades -->
         <section class="skills">
-            <article class="skills__desc">
+            <article class="skills__title">
                 <h2>Habilidades</h2>
             </article>
 
-            <article class="skills__item">
-                <h3>JavaScript</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--50"></div>
-                    <p>50%</p>
+            <article class="skills__tarjet">
+                <div class="tarjet__title">
+                    <p>Desarrollo web</p>
+                </div>
+
+                <div class="skills__item">
+                    <h3>JavaScript</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--50"></div>
+                        <p>50%</p>
+                    </div>
+                </div>
+    
+                <div class="skills__item">
+                    <h3>HTML5</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
+                </div>
+    
+                <div class="skills__item">
+                    <h3>CSS3</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
+                </div>
+    
+                <div class="skills__item">
+                    <h3>JAVA</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
+                </div>
+    
+                <div class="skills__item">
+                    <h3>SQL</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
+                </div>
+    
+                <div class="skills__item">
+                    <h3>Phyton</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
+                </div>
+    
+                <div class="skills__item">
+                    <h3>React</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
                 </div>
             </article>
 
-            <article class="skills__item">
-                <h3>HTML5</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--70"></div>
-                    <p>70%</p>
+            <article class="skills__tarjet">
+                <div class="tarjet__title">
+                    <p>Diseño</p>
                 </div>
-            </article>
 
-            <article class="skills__item">
-                <h3>CSS3</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--70"></div>
-                    <p>70%</p>
+                <div class="skills__item">
+                    <h3>Ilustrator</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
                 </div>
-            </article>
 
-            <article class="skills__item">
-                <h3>JAVA</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--70"></div>
-                    <p>70%</p>
+                <div class="skills__item">
+                    <h3>Photoshop</h3>
+                    <div class="item__cont">
+                        <div class="skills__item__prog percen--70"></div>
+                        <p>70%</p>
+                    </div>
                 </div>
             </article>
-
-            <article class="skills__item">
-                <h3>SQL</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--70"></div>
-                    <p>70%</p>
-                </div>
-            </article>
-
-            <article class="skills__item">
-                <h3>Phyton</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--70"></div>
-                    <p>70%</p>
-                </div>
-            </article>
-
-            <article class="skills__item">
-                <h3>React</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--70"></div>
-                    <p>70%</p>
-                </div>
-            </article>
-
-            <article class="skills__item">
-                <h3>Ilustrator</h3>
-                <div class="item__cont">
-                    <div class="skills__item__prog percen--70"></div>
-                    <p>70%</p>
-                </div>
-            </article>
+            
         </section>
-
+<!-- Seccion de Idiomas-->
         <section class="lang">
             <article class="lang__title">
                 <h2>Idiomas</h2>
@@ -185,13 +242,37 @@
                 <p>B1</p>
             </article>
         </section>
+<!-- Seccion de Estudios complementarios -->
+        <section class="certification">
+            <article class="certification__title">
+                <h2>Estudios complementarios</h2>
+            </article>
+
+            <article class="certification__tarjet">
+                <h3>Instalaciones electricas domiciliarias</h3>
+                <p>SENA curso corto 40h</p>
+                <div class="seeSouport">
+                    <a href="#">Ver soporte</a>
+                    <div class="row"></div>
+                </div>  
+            </article>
+
+            <article class="certification__tarjet">
+                <h3>Electronica: electrotecnia y medidas</h3>
+                <p>SENA curso corto 40h</p>
+                <div class="seeSouport">
+                    <a href="#">Ver soporte</a>
+                    <div class="row"></div>
+                </div>  
+            </article>
+        </section>
 <!-- Seccion de Experiencia laboral -->
         <section class="experience">
             <!-- Titulo de experiencia -->
             <article class="experience__title">
                 <h2>Experiencia laboral</h2>
             </article>
-            <!-- Tarjeta de experiencia-->
+            <!-- Tarjeta de experiencia -->
             <article class="experience__tarjet">
                 <div class="tarjet__info">
                     <h3>Auxiliar de mantenimiento de equipos médicos</h3>
@@ -199,8 +280,16 @@
                     <p>(Práctica profesional)Tareas realizadas: Revisión, mantenimiento preventivo y calibración de equipos médicos, como: (Monitor de signos, electrocardiógrafo, esfigmomanómetro, temperatura de congeladores y autoclaves), calibración de equipos según el manual de usuario y uso de equipos patrón certificados.</p>
                 </div>
             </article>
+            <!-- Tarjeta de experiencia -->
+            <article class="experience__tarjet">
+                <div class="tarjet__info">
+                    <h3>Auxiliar en gestión tecnológica</h3>
+                    <p>Ago/2018 a Mar/2020</p>
+                    <p>Responsable de la gestión de los cronogramas de mantenimientos preventivo y correctivo, encargado de la bodega de insumos médicos y administrativos, desarrolle una interfaz en Excel que permitía administrar los insumos y el inventario.</p>
+                </div>
+            </article>
         </section>
-
+<!-- Seccion de proyectos -->
         <section id="proyects" class="main-wrapper__proyects">
 
         </section>
