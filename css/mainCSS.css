@@ -1,3 +1,11 @@
+:root
+{
+	--darkblue: #1B448F;
+	--blue: #1F62DB;
+	--yellow: #DBC213;
+	--darkmagenta: #6E1B8F;
+	--magenta: #A109DB;
+}
 *{
 	margin: 0;
 	padding: 0;

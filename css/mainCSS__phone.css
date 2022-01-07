@@ -68,7 +68,7 @@
 }
 .info__name
 {
-    color: #F0D10D;
+    color: var(--yellow);
     text-align: center;
     font-size: 2rem;
     font-family: 'Lobster', cursive;
@@ -138,7 +138,7 @@
 .resume__element > h2
 {
     width: 100%;
-    color: #F0D10D;
+    color: var(--yellow);
     font-size: 40px;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2px;
@@ -171,69 +171,93 @@
 /*Seccion Sobre mi*/
 .about
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100vw;
-    height: auto;
-    background-color: black;
-}
-.about__element
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 200px;
+    background-color: rgb(0, 0, 0);
     margin: 20px 0px;
 }
-.element__content
+.about > h2
 {
+    width: 100vw;
+    color: white;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: center;
+}
+.slide__about
+{
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 135px;
-    height: 135px;
-    border: 3px solid white;
-    border-radius: 50%;
+    width: 100vw;
 }
-.about__element > p
+.arrowRight
 {
-    margin: 8px 0px 0px 0px;
-    font-size: 20px ;
-    color: white;
-}
-.element__content__study
-{
-    background-image: url(/assets/Hugo/magistrate.png);
-}
-.element__content__skills
-{
-    background-image: url(/assets/Hugo/skills.png);
-}
-.element__content__lang
-{
-    background-image: url(/assets/Hugo/chat.png);
-}
-.element__content__cert
-{
-    background-image: url(/assets/Hugo/certificate.png);
-}
-.element__content__exp
-{
-    background-image: url(/assets/Hugo/suitcase.png);
-}
-.element__content__proy
-{
-    background-image: url(/assets/Hugo/idea.png);
-}
-.element__content__study, .element__content__skills, .element__content__lang, .element__content__cert, .element__content__exp, .element__content__proy
-{
-    width: 60px;
-    height: 60px;
+    background-image: url(/assets/Slide/right-arow.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.arrowLeft
+{
+    background-image: url(/assets/Slide/right-arow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+}
+.arrowLeft, .arrowRight
+{
+    position: relative;
+    top: 130px;
+    width: 40px;
+    height: 40px;
+}
+.wrap
+{
+    display: flex;
+    justify-content: flex-start;
+    width: calc(90vw - 80px);
+    padding: 10px;
+    overflow: hidden;
+}
+/*Contenedor de tarjetas de items*/
+.wrapTarjet
+{
+    position: relative;
+    flex-shrink: 0;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.tarjet
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: -90px;
+    width: 300px;
+    height: 300px;
+}
+.study
+{
+    background-image: url(/assets/Slide/estudios.jpg);
+}
+.skill
+{
+    background-image: url(/assets/Slide/skills.jpg);
+}
+.langu
+{
+    background-image: url(/assets/Slide/speak.jpg);
+}
+.study, .skill, .langu
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /*Seccion de Estudios*/
 .degrees
 {
@@ -241,6 +265,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100vw;
+    margin-bottom: 50px;
 }
 .degree__title
 {
@@ -249,28 +274,45 @@
 .degree__title > h2
 {
     width: 100%;
-    color: white;
+    color: var(--yellow);
+    font-family: 'Abril Fatface', cursive;
     font-size: 40px;
     text-align: center;
+    letter-spacing: 2px;
+    margin: 30px 0px;
 }
 .degree__tarjet
 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     width: 300px;
+    height: 170px;
     padding: 20px;
     margin: 20px 10px;
+    background-color: white;
     border: 1px solid white;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 .degree__tarjet > h3
 {
     width: 100%;
-    color: white;
-    font-size: 20px;
+    color: var(--darkblue);
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1.5px;
+    font-size: 25px;
 }
 .degree__tarjet > p
 {
     width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     text-align: left;
+    font-weight: 400;
+}
+.degree__tarjet > p:last-child
+{
+    font-weight: 600;
 }
 /*Seccion de Habilidades*/
 .skills
@@ -285,29 +327,32 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    border: 1px solid white;
 }
 .skills__title > h2
 {
+    font-family: 'Abril Fatface', cursive;
     font-size: 40px;
+    letter-spacing: 2px;
+    color: var(--yellow);
 }
 .skills__tarjet
 {
-    min-width: 280px;
-    max-width: 400px;
+    width: 280px;
     margin: 20px;
     padding: 20px;
-    border: 1px solid white;
+    border: 4px solid var(--darkmagenta);
+    border-radius: 15px;
 }
 .tarjet__title
 {
     width: 100%;
-    border: 1px solid red;
+    margin-bottom: 20px;
 }
 .tarjet__title > p
 {
     color: white;
-    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
 }
 .skills__item
 {
@@ -317,7 +362,9 @@
 .skills__item > h3
 {
     text-align: left;
-    font-size: 15px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     margin: 0px 0px 10px 10px;
 }
 .item__cont
@@ -331,12 +378,66 @@
     width: 80%;
     height: 20px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 .item__cont > p
 {
     width: 10px;
     margin: 0px 0px 0px 10px;
+}
+
+/*Lenguaje*/
+.lang
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100vw;
+    margin-bottom: 50px;
+}
+.lang__title
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0px 40px 0px;
+}
+.lang__title > h2
+{
+    color: var(--yellow);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.lang__item
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0px 20px 20px 20px;
+    padding: 15px;
+}
+.lang__item > h3
+{
+    color: var(--darkblue);
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1.5px;
+    font-size: 30px;
+}
+.lang__item > p
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font: 400px;
+}
+.lang__item > h3, p
+{
+    width: 90%;
+    margin: 5px 8px;
+    text-align: center;
 }
 /*Seccion de Estudios complementarios*/
 .certification
@@ -351,58 +452,32 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    margin-bottom: 20px;
 }
 .certification__title > h2
 {
-    color: white;
-    font-size: 40px;
+    color: var(--yellow);
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+    font-size: 33px;
     text-align: center;
 }
 .certification__tarjet
 {
+    display: flex;
+    justify-content: center;
     min-width: 300px;
     max-width: 750px;
-    border: 1px solid white;
+    border: 4px solid white;
     border-radius: 15px;
     padding: 20px;
     margin: 20px 10px;
 }
-/*Lenguaje*/
-.lang
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100vw;
-    
-
-}
-.lang__title
-{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 10px 20px;
-}
-.lang__title > h2
+.tarjetCErt > h3
 {
     color: white;
-    font-size: 40px;
-}
-.lang__item
-{
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 300px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 0px 20px 20px 20px;
-}
-.lang__item > h3, p
-{
-    width: 90%;
-    margin: 5px 8px;
-    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
 }
 /*Seccion de Experiencia Laboral*/
 .experience /*Seccion Contenedora item experiencia laboral*/
