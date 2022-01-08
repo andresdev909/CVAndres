@@ -337,16 +337,21 @@
 }
 .skills__tarjet
 {
-    width: 280px;
-    margin: 20px;
-    padding: 20px;
+    position: relative;
+    width: 90vw;
+    margin: 40px 10px 20px 10px;
+    padding: 40px 20px 20px 20px;
     border: 4px solid var(--darkmagenta);
     border-radius: 15px;
 }
 .tarjet__title
 {
-    width: 100%;
-    margin-bottom: 20px;
+    position: absolute;
+    top: -25px;
+    left: calc(50% - (90%/2));
+    width: 90%;
+    background-color: var(--darkblue);
+    border-radius: 15px;
 }
 .tarjet__title > p
 {
@@ -369,21 +374,48 @@
 }
 .item__cont
 {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
+}
+.skills__item__prog, .progressVar
+{
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
 }
 .skills__item__prog
 {
-    width: 80%;
-    height: 20px;
-    border-radius: 10px;
+    
+}
+.progressVar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
     border: 1px solid white;
 }
-.item__cont > p
+/** Clases para cambiar la barra de proceso**/
+.percen--60, .percen--70, .percen--50, .percen--40
 {
-    width: 10px;
-    margin: 0px 0px 0px 10px;
+    background: rgb(131,58,180);
+    background: linear-gradient(50deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.percen--60
+{
+    width: 60%;
+}
+.percen--70
+{
+    width: 70%;
+}
+.percen--50
+{
+    width: 50%;
+}
+.percen--40
+{
+    width: 40%;
 }
 
 /*Lenguaje*/
@@ -492,37 +524,66 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    margin: 40px 0px 40px 0px;
 }
 .experience__title > h2
 {
-    color: white;
+    color: var(--yellow);
+    font-family: 'Abril Fatface', cursive;
     font-size: 40px;
+    letter-spacing: 2px;
     text-align: center;
 } 
 /*Div de tarjeta*/
 .experience__tarjet /*Definimoslaspropiedades dela tarjeta de experiencias*/
 {
-    width: 300px;
-    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
 }
 .tarjet__info
 {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: calc(100% - 20px);
+    min-width: 300px;
+    max-width: 750px;
     border: 1px solid black;
     border-radius: 15px;
-    padding: 20px;
-    margin: 20px 10px;
+    padding: 40px 20px 20px 20px;
+    margin: 30px 10px;
 }
 .tarjet__info > h3
 {
     width: 100%;
+    color: var(--yellow);
+    font-family: 'Abril Fatface', cursive;
     font-size: 20px;
+    letter-spacing: 1.5px;
     margin-bottom: 10px;
 }
 .tarjet__info > p
 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+.infoTitle
+{
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    width: 200px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+}
+.infoTitle > p
+{
     width: 100%;
+    color: var(--darkblue);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     text-align: left;
 }
