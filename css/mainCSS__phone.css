@@ -18,9 +18,9 @@
 }
 .menu__colapsed
 {
+    position: absolute;
     display: none;/*Cambio con none para ocultar y flex para ver*/
     flex-direction: column;
-    position: absolute;
     background-color: rgba(255, 255, 255, 0.493);
     width: 100vw;
     height: auto;
@@ -28,6 +28,12 @@
 .menu__colapsed > li > a
 {
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.menu__colapsed > li > a:hover
+{
+    color: black;
 }
 .menu__colapsed--item
 {
@@ -37,7 +43,12 @@
     background-color: rgb(0, 0, 0);
     margin: 5px 10px 5px 10px;
     border-radius: 10px;
-    height: 40px;
+    height: 50px;
+}
+.menu__colapsed--item:hover
+{
+    background-color: white;
+    border: 2px solid black;
 }
 .last
 {
@@ -140,15 +151,14 @@
     width: 100%;
     color: var(--yellow);
     font-size: 40px;
-    font-family: 'Abril Fatface', cursive;
-    letter-spacing: 2px;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1px;
     margin: 40px 0px 10px 40px;
 }
 .resume__element > p
 {
     width: calc(100vw - 40px);
-    background: rgb(162,0,240);
-    background: linear-gradient(0deg, rgba(162,0,240,1) 0%, rgba(118,24,163,1) 69%);
+    background: var(--blue);
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
@@ -179,7 +189,7 @@
 {
     width: 100vw;
     color: white;
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
     font-size: 40px;
     text-align: center;
@@ -274,11 +284,11 @@
 .degree__title > h2
 {
     width: 100%;
-    color: var(--yellow);
-    font-family: 'Abril Fatface', cursive;
+    color: black;
+    font-family: 'Lobster', cursive;
     font-size: 40px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 30px 0px;
 }
 .degree__tarjet
@@ -293,13 +303,16 @@
     background-color: white;
     border: 1px solid white;
     border-radius: 20px;
+    box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.73);
+    -webkit-box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.73);
+    -moz-box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.73);
 }
 .degree__tarjet > h3
 {
     width: 100%;
     color: var(--darkblue);
-    font-family: 'Abril Fatface', cursive;
-    letter-spacing: 1.5px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
     font-size: 25px;
 }
 .degree__tarjet > p
@@ -327,13 +340,14 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    margin-bottom: 40px;
 }
 .skills__title > h2
 {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Lobster', cursive;
     font-size: 40px;
     letter-spacing: 2px;
-    color: var(--yellow);
+    color: black;
 }
 .skills__tarjet
 {
@@ -341,7 +355,7 @@
     width: 90vw;
     margin: 40px 10px 20px 10px;
     padding: 40px 20px 20px 20px;
-    border: 4px solid var(--darkmagenta);
+    background-color: var(--darkblue);
     border-radius: 15px;
 }
 .tarjet__title
@@ -350,13 +364,14 @@
     top: -25px;
     left: calc(50% - (90%/2));
     width: 90%;
-    background-color: var(--darkblue);
+    background-color: white;
+    border: 2px solid black;
     border-radius: 15px;
 }
 .tarjet__title > p
 {
-    color: white;
-    font-family: 'Abril Fatface', cursive;
+    color: black;
+    font-family: 'Lobster', cursive;
     font-size: 30px;
 }
 .skills__item
@@ -398,8 +413,8 @@
 /** Clases para cambiar la barra de proceso**/
 .percen--60, .percen--70, .percen--50, .percen--40
 {
-    background: rgb(131,58,180);
-    background: linear-gradient(50deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: rgb(255,248,0);
+    background: linear-gradient(304deg, rgba(255,248,0,1) 0%, rgba(255,161,8,1) 50%, rgba(240,95,4,1) 100%);
 }
 .percen--60
 {
@@ -436,8 +451,8 @@
 }
 .lang__title > h2
 {
-    color: var(--yellow);
-    font-family: 'Abril Fatface', cursive;
+    color: black;
+    font-family: 'Lobster', cursive;
     font-size: 40px;
     letter-spacing: 2px;
 }
@@ -451,12 +466,15 @@
     border-radius: 10px;
     margin: 0px 20px 20px 20px;
     padding: 15px;
+    box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.73);
+    -webkit-box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.73);
+    -moz-box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.73);
 }
 .lang__item > h3
 {
     color: var(--darkblue);
-    font-family: 'Abril Fatface', cursive;
-    letter-spacing: 1.5px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
     font-size: 30px;
 }
 .lang__item > p
@@ -488,8 +506,8 @@
 }
 .certification__title > h2
 {
-    color: var(--yellow);
-    font-family: 'Abril Fatface', cursive;
+    color: black;
+    font-family: 'Lobster', cursive;
     letter-spacing: 2px;
     font-size: 33px;
     text-align: center;
@@ -500,16 +518,28 @@
     justify-content: center;
     min-width: 300px;
     max-width: 750px;
-    border: 4px solid white;
+    border: 4px solid var(--darkblue);
     border-radius: 15px;
     padding: 20px;
     margin: 20px 10px;
+    transition: border .5s;
+}
+.certification__tarjet:hover
+{
+    border: 4px solid var(--ceilblue);
+    background-color: white;
 }
 .tarjetCErt > h3
 {
-    color: white;
+    color: var(--darkblue);
     font-family: 'Roboto', sans-serif;
     font-size: 27px;
+    transition: font-size .5s;
+}
+.tarjetCErt > h3:hover
+{
+    color: black;
+    font-size: 30px;
 }
 /*Seccion de Experiencia Laboral*/
 .experience /*Seccion Contenedora item experiencia laboral*/
@@ -528,8 +558,8 @@
 }
 .experience__title > h2
 {
-    color: var(--yellow);
-    font-family: 'Abril Fatface', cursive;
+    color: black;
+    font-family: 'Lobster', cursive;
     font-size: 40px;
     letter-spacing: 2px;
     text-align: center;
@@ -548,7 +578,7 @@
     flex-wrap: wrap;
     min-width: 300px;
     max-width: 750px;
-    border: 1px solid black;
+    background-color: var(--darkblue);
     border-radius: 15px;
     padding: 40px 20px 20px 20px;
     margin: 30px 10px;
@@ -556,8 +586,8 @@
 .tarjet__info > h3
 {
     width: 100%;
-    color: var(--yellow);
-    font-family: 'Abril Fatface', cursive;
+    color: white;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     letter-spacing: 1.5px;
     margin-bottom: 10px;
@@ -574,15 +604,17 @@
     position: absolute;
     top: -30px;
     left: 20px;
-    width: 200px;
+    width: 220px;
     border-radius: 15px;
+    border:2px solid black;
     background-color: white;
     padding: 10px;
 }
 .infoTitle > p
 {
     width: 100%;
-    color: var(--darkblue);
+    color: black;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-align: left;
