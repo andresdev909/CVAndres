@@ -79,7 +79,7 @@
 }
 .info__name
 {
-    color: var(--yellow);
+    color: black;
     text-align: center;
     font-size: 2rem;
     font-family: 'Lobster', cursive;
@@ -181,18 +181,24 @@
 /*Seccion Sobre mi*/
 .about
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
+    height: 500px;
     background-color: rgb(0, 0, 0);
-    margin: 20px 0px;
+    margin: 40px 0px;
 }
 .about > h2
 {
     width: 100vw;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lobster', cursive;
     letter-spacing: 2px;
     font-size: 40px;
     text-align: center;
+    margin: 0 0 40px 0;
 }
 .slide__about
 {
@@ -226,8 +232,12 @@
     display: flex;
     justify-content: flex-start;
     width: calc(90vw - 80px);
-    padding: 10px;
     overflow: hidden;
+}
+.internalWrap
+{
+    display: flex;
+    margin-left: -210px;
 }
 /*Contenedor de tarjetas de items*/
 .wrapTarjet
@@ -236,7 +246,7 @@
     flex-shrink: 0;
     width: 200px;
     height: 300px;
-    margin: 10px;
+    margin: 10px 10px 10px 1px;
     border: 1px solid white;
     border-radius: 15px;
     overflow: hidden;
@@ -246,10 +256,25 @@
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     top: 0;
-    left: -90px;
+    left: -50px;
     width: 300px;
     height: 300px;
+}
+.tarjet > p
+{
+    width: 200px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 .study
 {
@@ -257,13 +282,25 @@
 }
 .skill
 {
-    background-image: url(/assets/Slide/skills.jpg);
+    background-image: url(/assets/Slide/habilidades.jpg);
 }
 .langu
 {
-    background-image: url(/assets/Slide/speak.jpg);
+    background-image: url(/assets/Slide/idiomas.jpg);
 }
-.study, .skill, .langu
+.compEst
+{
+    background-image: url(/assets/Slide/certAdicionales.jpg);
+}
+.experiencia
+{
+    background-image: url(/assets/Slide/experiencia.jpg);
+}
+.proyectos
+{
+    background-image: url(/assets/Slide/proyectos.jpg);
+}
+.study, .skill, .langu, .compEst, .experiencia, .proyectos
 {
     background-repeat: no-repeat;
     background-size: cover;
@@ -509,37 +546,64 @@
     color: black;
     font-family: 'Lobster', cursive;
     letter-spacing: 2px;
-    font-size: 33px;
+    font-size: 37px;
     text-align: center;
 }
-.certification__tarjet
+.certification--view
 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    min-width: 300px;
-    max-width: 750px;
-    border: 4px solid var(--darkblue);
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px 10px;
-    transition: border .5s;
+    width: 95vw;
+    border: 3px solid var(--darkblue);
+    border-radius: 20px;
 }
-.certification__tarjet:hover
+.certification__title
 {
-    border: 4px solid var(--ceilblue);
-    background-color: white;
+    width: 70%;
+    margin: 20px;
 }
-.tarjetCErt > h3
+.certification__title > h3
 {
-    color: var(--darkblue);
     font-family: 'Roboto', sans-serif;
-    font-size: 27px;
-    transition: font-size .5s;
-}
-.tarjetCErt > h3:hover
-{
-    color: black;
     font-size: 30px;
+    text-align: center;
+}
+.certification__info
+{
+    display: flex;/*Cambia entre none y visible*/
+    width: 90%;
+    margin-bottom: 20px;
+    background-color: var(--blue);
+    border-radius: 15px;
+}
+.info__wrapp
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.info__item
+{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--ceilblue);
+    margin-top: 20px;
+}
+.info__item:last-child
+{
+    margin-bottom: 20px;
+}
+.info__item > p
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
 }
 /*Seccion de Experiencia Laboral*/
 .experience /*Seccion Contenedora item experiencia laboral*/
@@ -564,7 +628,7 @@
     letter-spacing: 2px;
     text-align: center;
 } 
-/*Div de tarjeta*/
+/** Div de tarjeta */
 .experience__tarjet /*Definimoslaspropiedades dela tarjeta de experiencias*/
 {
     display: flex;
