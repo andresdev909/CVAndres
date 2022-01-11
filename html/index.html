@@ -15,10 +15,10 @@
     <header class="header">
 
         <nav class="header__menu">
-            <span class="menu"></span>
+            <span id="menu" class="menu"></span>
 
-            <ul class="menu__colapsed">
-                <li><div class="close"></div></li>
+            <ul id="menu__colapsed" class="menu__colapsed">
+                <li><div id="close" class="close"></div></li>
                 <li><a class="menu__colapsed--item" href="#">Sobre mi</a></li>
                 <li><a class="menu__colapsed--item" href="#">Habilidades</a></li>
                 <li><a class="menu__colapsed--item" href="#">Idiomas</a></li>
@@ -69,31 +69,54 @@
             <h2>Sobre mi</h2>
 
             <article class="slide__about">
-                <div class="arrowLeft"></div>.
+                <div id="arrowLeft" class="arrowLeft"></div>.
                 <div class="wrap">
-                    <div class="wrapTarjet">
-                        <a href="#">
-                            <div class="tarjet study">
-                                <p>Estudios</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="wrapTarjet">
-                        <a href="#">
-                            <div class="tarjet skill">
-                                <p>Habilidades</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="wrapTarjet">
-                        <a href="#">
-                            <div class="tarjet langu">
-                                <p>Idiomas</p>
-                            </div>
-                        </a>
+                    <div id="internalWrap" class="internalWrap">
+                        <div class="wrapTarjet">
+                            <a href="#">
+                                <div class="tarjet study">
+                                    <p>Estudios</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wrapTarjet">
+                            <a href="#">
+                                <div class="tarjet skill">
+                                    <p>Habilidades</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wrapTarjet">
+                            <a href="#">
+                                <div class="tarjet langu">
+                                    <p>Idiomas</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wrapTarjet">
+                            <a href="#">
+                                <div class="tarjet compEst">
+                                    <p>Adicional</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wrapTarjet">
+                            <a href="#">
+                                <div class="tarjet experiencia">
+                                    <p>Experiencia</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wrapTarjet">
+                            <a href="#">
+                                <div class="tarjet proyectos">
+                                    <p>Proyectos</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="arrowRight"></div>
+                <div id="arrowRight" class="arrowRight"></div>
             </article>
         </section>
 <!--Seccion de Estudios-->
@@ -227,22 +250,23 @@
                 <h2>Estudios complementarios</h2>
             </article>
 
-            <article class="certification__tarjet">
-                <a href="#">
-                    <div class="tarjetCErt">
-                        <h3>SENA cursos cortos</h3>
-                    </div>
-                </a>
- 
+            <article class="certification--view"><!--Modificador entre view y click-->
+                <div class="certification__title">
+                    <h3>SENA cursos cortos</h3>
+                </div>
+                
+                <div class="certification__info"><!--Modificador entre view y hidden-->
+                    <ul class="info__wrapp">
+                        <li class="info__item">
+                            <p>Curso 1</p>
+                        </li>
+                        <li class="info__item">
+                            <p>Curso 2</p>
+                        </li>
+                    </ul>
+                </div>
             </article>
 
-            <article class="certification__tarjet">
-                <a href="#">
-                    <div class="tarjetCErt">
-                        <h3>Free code camp</h3>
-                    </div>
-                </a>  
-            </article>
         </section>
 <!-- Seccion de Experiencia laboral -->
         <section class="experience">
@@ -279,6 +303,6 @@
     <footer class="footer">
         <section class="footer__contact"></section>
     </footer>
-    <script src="/js/main-script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
