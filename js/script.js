@@ -7,16 +7,27 @@ const $menuBurguer = document.getElementById("menu"),
     $arrowLeft = document.getElementById("arrowLeft"),
 
     $showBoxCert = document.querySelector(".certification--view"),
-    $certInfo = document.querySelector(".certification__info")
-    
-let contador = 0;
+    $certInfo = document.querySelector(".certification__info"),
+
+    $showBoxCertFcc = document.querySelector(".certification--fCC"),
+    $certInfoFcc = document.querySelector(".certification__fCC"),
+
+    $showBoxCertEngl = document.querySelector(".certification--English"),
+    $certInfoEngl = document.querySelector(".certification__English")
+
+// Valor de heigth tarjeta menu hamburgesa
+const $MENUTARJET = document.querySelector(".menu__colapsed")
+let elementValue = window.getComputedStyle($MENUTARJET);
+let elementSize = elementValue.getPropertyValue('height');
+
+$MENUTARJET.style.top = "-"+elementSize
 
 //Seccion de manejo del menu Hamburguesa
 $menuBurguer.addEventListener('click',()=>{
-    $menu__colapsed.style.setProperty('display','flex')
+    $menu__colapsed.style.setProperty('top','0')
 })
 $closeBurguer.addEventListener('click',()=>{
-    $menu__colapsed.style.setProperty('display','none')
+    $menu__colapsed.style.setProperty('top','-'+elementSize)
 })
 
 //Seccion de slide sobre mi
@@ -49,15 +60,22 @@ $arrowRight.addEventListener('click',()=>{
 })
 
 // Seccion sobre Estudiuos adicionales
-$showBoxCert.addEventListener('click',()=>{
-    let elementStyle = window.getComputedStyle($certInfo);
+function activarVentana(element){
+    let elementStyle = window.getComputedStyle(element);
     let elementDisplay = elementStyle.getPropertyValue('display');
     
     if(elementDisplay == 'none'){
-        $certInfo.style.display = "flex"
+        element.style.display = "flex"
     }else{
-        $certInfo.style.display = "none"
+        element.style.display = "none"
     }
-
-    
+}
+$showBoxCert.addEventListener('click',()=>{
+    activarVentana($certInfo)  
+})
+$showBoxCertFcc.addEventListener('click',()=>{
+    activarVentana($certInfoFcc)  
+})
+$showBoxCertEngl.addEventListener('click',()=>{
+    activarVentana($certInfoEngl)  
 })
