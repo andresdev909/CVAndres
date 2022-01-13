@@ -1,5 +1,4 @@
 
-
 /*Barra de navegacion*/
 .header__menu
 {
@@ -19,11 +18,13 @@
 .menu__colapsed
 {
     position: absolute;
-    display: none;/*Cambio con none para ocultar y flex para ver*/
+    top: -100px;
+    display: flex;/*Cambio con none para ocultar y flex para ver*/
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.493);
+    background-color: rgb(255, 255, 255);
     width: 100vw;
     height: auto;
+    transition: top 0.5s;
 }
 .menu__colapsed > li > a
 {
@@ -169,8 +170,8 @@
 }
 .resume__photo
 {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-image: url(/assets/Hugo/FotoHACL1.png);
     background-repeat: no-repeat;
@@ -310,7 +311,7 @@
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100vw;
     margin-bottom: 50px;
 }
@@ -333,7 +334,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 300px;
+    width: 90vw;
     height: 170px;
     padding: 20px;
     margin: 20px 10px;
@@ -497,7 +498,7 @@
 {
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    width: 80vw;
     height: 120px;
     background-color: white;
     border-radius: 10px;
@@ -549,7 +550,7 @@
     font-size: 37px;
     text-align: center;
 }
-.certification--view
+.certification--view, .certification--fCC, .certification--English
 {
     display: flex;
     flex-wrap: wrap;
@@ -557,6 +558,7 @@
     width: 95vw;
     border: 3px solid var(--darkblue);
     border-radius: 20px;
+    margin: 15px 0;
 }
 .certification__title
 {
@@ -569,9 +571,9 @@
     font-size: 30px;
     text-align: center;
 }
-.certification__info
+.certification__info, .certification__fCC, .certification__English
 {
-    display: flex;/*Cambia entre none y visible*/
+    display: none;/*Cambia entre none y visible*/
     width: 90%;
     margin-bottom: 20px;
     background-color: var(--blue);
@@ -589,10 +591,11 @@
     display: flex;
     align-items: center;
     width: 90%;
-    height: 40px;
+    height: auto;
     border-radius: 10px;
     background-color: var(--ceilblue);
     margin-top: 20px;
+    padding: 3px;
 }
 .info__item:last-child
 {
@@ -682,4 +685,56 @@
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-align: left;
+}
+
+@media (min-width: 768px) {
+    /*Seccion de Resumen sobre mi*/
+    .resume__element
+    {
+        min-width: 80vw;
+    }
+    /*Seccion de estudios*/
+    .degree__tarjet
+    {
+        width: 80vw;
+    }
+
+    /*Seccion de Habilidades*/
+    .skills__tarjet
+    {
+        width: 65vw;
+    }
+
+    /*Seccion de certificados adicionales*/
+    .certification--view
+    {
+        width: 80vw;
+    }
+    .certification--fCC
+    {
+        width: 80vw;
+    }
+    .certification--English
+    {
+        width: 80vw;
+    }
+
+    /*Seccion de experiencia laboral*/
+    .experience__tarjet
+    {
+        width: 80%;
+    }
+    .tarjet__info
+    {
+        width: 100%;
+        min-width: none;
+        max-width: none;
+    }
+}
+
+@media (min-width: 1023px){
+    body{
+        background-color: aquamarine;
+    }
+    
 }
