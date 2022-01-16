@@ -1,10 +1,69 @@
-const $menuBurguer = document.getElementById("menu"),
-    $menu__colapsed = document.getElementById("menu__colapsed"),
-    $closeBurguer = document.getElementById("close"),
 
-    $slide = document.querySelector("#internalWrap"),
-    $arrowRight = document.getElementById("arrowRight"),
-    $arrowLeft = document.getElementById("arrowLeft"),
+class webActionsMenu{
+
+    /*Atributos*/
+    constructor()
+    { 
+        this.menuBurguer = document.getElementById("menu")
+        this.closeBurguer = document.getElementById("close")
+    }
+    /**Getters y setters */
+    setPositionMenu(nameClass, value){
+        const $CONTMENU = document.querySelector(nameClass)
+        $CONTMENU.setAttribute('style', `top: ${value};`)
+    }
+    getElementSize(nameClass){//Resibe elnombre de la clase delelemento a evaluar
+        const $ELEMENT = document.querySelector(nameClass)
+
+        let elemHeight = window.getComputedStyle($ELEMENT);
+        let elemSizeH = elemHeight.getPropertyValue('height');
+
+        let elemWhith = window.getComputedStyle($ELEMENT);
+        let elemSizeW = elemWhith.getPropertyValue('width');
+
+        return({
+            eWidth: elemSizeW,
+            eHeight: elemSizeH
+        })
+    }
+    /**Metodos */
+    
+
+}
+
+class webActionsSlide{
+    constructor()
+    {
+        this.arrowRight = document.getElementById("arrowRight")
+        this.arrowLeft = document.getElementById("arrowLeft")
+        this.slide = document.querySelector(".internalWrap")
+    }
+    tarjetBeforeEnd(){
+        const numberTarjets = document.querySelectorAll(".wrapTarjet")/**Selleciono todaslas tarjetas y las guardo enun array */
+        this.slide.style.marginLeft = '-210px'
+        this.slide.style.transition = 'all 0.5s'
+        setTimeout(()=>{
+            this.slide.style.transition = 'none'
+            this.slide.insertAdjacentElement('beforeend', numberTarjets[0])
+            this.slide.style.marginLeft = '0px'
+        },500)
+
+    }
+    tarjetAfterBegin(){
+        const numberTarjets = document.querySelectorAll(".wrapTarjet")/**Selleciono todaslas tarjetas y las guardo enun array */
+        this.slide.style.marginLeft = '0px'
+        this.slide.style.transition = 'all 0.5s'
+        setTimeout(()=>{
+            this.slide.style.transition = 'none'
+            this.slide.insertAdjacentElement('afterbegin', numberTarjets[numberTarjets.length - 1])
+            this.slide.style.marginLeft = '-210px'
+        },500)
+    }
+
+    
+}
+
+const   
 
     $showBoxCert = document.querySelector(".certification--view"),
     $certInfo = document.querySelector(".certification__info"),
@@ -15,51 +74,40 @@ const $menuBurguer = document.getElementById("menu"),
     $showBoxCertEngl = document.querySelector(".certification--English"),
     $certInfoEngl = document.querySelector(".certification__English")
 
-// Valor de heigth tarjeta menu hamburgesa
-const $MENUTARJET = document.querySelector(".menu__colapsed")
-let elementValue = window.getComputedStyle($MENUTARJET);
-let elementSize = elementValue.getPropertyValue('height');
 
-$MENUTARJET.style.top = "-"+elementSize
+/** Seccion de manejo del menu Hamburguesa **/
+let menu = new webActionsMenu()
+let valueWidth = menu.getElementSize(".menu__colapsed").eWidth
+////Presenta en movil y desktop
+if(parseFloat(valueWidth.slice(0,-2)) < 918.688)
+{
+    menu.setPositionMenu(".menu__colapsed", '-'+menu.getElementSize(".menu__colapsed").eHeight)
+}
+else
+{
+    menu.setPositionMenu(".menu__colapsed", '0px')
+}
 
-//Seccion de manejo del menu Hamburguesa
-$menuBurguer.addEventListener('click',()=>{
-    $menu__colapsed.style.setProperty('top','0')
+menu.menuBurguer.addEventListener('click',()=>{
+    menu.setPositionMenu(".menu__colapsed", '0px')
 })
-$closeBurguer.addEventListener('click',()=>{
-    $menu__colapsed.style.setProperty('top','-'+elementSize)
-})
-
-//Seccion de slide sobre mi
-// //Control de la flecha izquierda
-$arrowLeft.addEventListener('click',()=>{
-    let firstTarjet = document.querySelectorAll(".wrapTarjet")[0]
-    $slide.style.marginLeft = "-210px"
-    $slide.style.transition = "all 0.5s"
-    setTimeout(function(){
-        $slide.style.transition = "none"
-        $slide.insertAdjacentElement('beforeend', firstTarjet)
-        $slide.style.marginLeft = "0px"
-    },500)
-
-})
-let tarjet = document.querySelectorAll(".wrapTarjet")
-let lastTarjet = tarjet[tarjet.length - 1]
-$slide.insertAdjacentElement('afterbegin', lastTarjet)
-// //Control dela flecha Derecha
-$arrowRight.addEventListener('click',()=>{
-    let wrappersTarjet = document.querySelectorAll(".wrapTarjet")
-    let wrappersTarjetLast = wrappersTarjet[wrappersTarjet.length - 1]
-    $slide.style.marginLeft = "0px"
-    $slide.style.transition = "all 0.5s"
-    setTimeout(function(){
-        $slide.style.transition = "none"
-        $slide.insertAdjacentElement('afterbegin', wrappersTarjetLast)
-        $slide.style.marginLeft = "-210px"
-    },500)
+menu.closeBurguer.addEventListener('click',()=>{
+    menu.setPositionMenu(".menu__colapsed", '-'+menu.getElementSize(".menu__colapsed").eHeight)
 })
 
-// Seccion sobre Estudiuos adicionales
+/** Seccion de slide sobre mi **/
+let slideAction = new webActionsSlide()
+////Control de la flecha izquierda
+slideAction.arrowLeft.addEventListener('click',()=>{
+    slideAction.tarjetBeforeEnd()
+})
+
+////Control dela flecha Derecha
+slideAction.arrowRight.addEventListener('click',()=>{
+    slideAction.tarjetAfterBegin()
+})
+
+/** Seccion sobre Estudiuos adicionales **/
 function activarVentana(element){
     let elementStyle = window.getComputedStyle(element);
     let elementDisplay = elementStyle.getPropertyValue('display');

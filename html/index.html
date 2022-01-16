@@ -14,16 +14,18 @@
 <body>
     <header class="header">
 
-        <nav class="header__menu">
+        <nav id="navbar" class="header__menu">
             <span id="menu" class="menu"></span>
 
             <ul id="menu__colapsed" class="menu__colapsed">
                 <li><div id="close" class="close"></div></li>
-                <li><a class="menu__colapsed--item" href="#">Sobre mi</a></li>
-                <li><a class="menu__colapsed--item" href="#">Habilidades</a></li>
-                <li><a class="menu__colapsed--item" href="#">Idiomas</a></li>
-                <li><a class="menu__colapsed--item" href="#">Experiencia</a></li>
-                <li><a class="menu__colapsed--item last" href="#">Proyectos</a></li>
+                <li><a class="menu__colapsed--item" href="#resume">Sobre mi</a></li>
+                <li><a class="menu__colapsed--item" href="#degrees">Estudios</a></li>
+                <li><a class="menu__colapsed--item" href="#skills">Habilidades</a></li>
+                <li><a class="menu__colapsed--item" href="#lang">Idiomas</a></li>
+                <li><a class="menu__colapsed--item" href="#certification">Complementarios</a></li>
+                <li><a class="menu__colapsed--item" href="#Experience">Experiencia</a></li>
+                <li><a class="menu__colapsed--item last" href="#projects">Proyectos</a></li>
             </ul>
         </nav>
 
@@ -43,7 +45,7 @@
                 <a href="#">
                     <div class="social__item whatsapp"></div>
                 </a>
-                <a href="#">
+                <a id="profile-link" href="#">
                     <div class="social__item github"></div>
                 </a>
                 <a href="#">
@@ -55,7 +57,7 @@
             </article>
         </section>
 <!-- Seccion de resumen sobre mi-->
-        <section class="resume">
+        <section id="resume" class="resume">
             <article class="resume__element">
                 <h2>Sobre mi</h2>
                 <P>Ingeniero electrónico, dotado de un espíritu emprendedor con una formación sólida en ciencias como la matemática y física. Conocimientos de programación de micro controladores, desarrollo web responsivo y diseño de circuitos electrónicos. Soy una persona responsable, creativa, proactiva y con iniciativa, tengo facilidad para trabajar en equipo y solucionar problemas de una forma fiable y eficiente. Creo firmemente en que la mejor estrategia para crecer como profesional y ser humano es nunca parar de aprender
@@ -65,7 +67,7 @@
             <div class="resume__photo"></div>
         </section>
 <!--Seccion sobre mi-->
-        <section class="about">
+        <section id="about" class="about">
             <h2>Sobre mi</h2>
 
             <article class="slide__about">
@@ -73,42 +75,42 @@
                 <div class="wrap">
                     <div id="internalWrap" class="internalWrap">
                         <div class="wrapTarjet">
-                            <a href="#">
+                            <a href="#degrees">
                                 <div class="tarjet study">
                                     <p>Estudios</p>
                                 </div>
                             </a>
                         </div>
                         <div class="wrapTarjet">
-                            <a href="#">
+                            <a href="#skills">
                                 <div class="tarjet skill">
                                     <p>Habilidades</p>
                                 </div>
                             </a>
                         </div>
                         <div class="wrapTarjet">
-                            <a href="#">
+                            <a href="#lang">
                                 <div class="tarjet langu">
                                     <p>Idiomas</p>
                                 </div>
                             </a>
                         </div>
                         <div class="wrapTarjet">
-                            <a href="#">
+                            <a href="#certification">
                                 <div class="tarjet compEst">
                                     <p>Adicional</p>
                                 </div>
                             </a>
                         </div>
                         <div class="wrapTarjet">
-                            <a href="#">
+                            <a href="#experience">
                                 <div class="tarjet experiencia">
                                     <p>Experiencia</p>
                                 </div>
                             </a>
                         </div>
                         <div class="wrapTarjet">
-                            <a href="#">
+                            <a href="#projects">
                                 <div class="tarjet proyectos">
                                     <p>Proyectos</p>
                                 </div>
@@ -120,7 +122,7 @@
             </article>
         </section>
 <!--Seccion de Estudios-->
-        <section class="degrees">
+        <section id="degrees" class="degrees">
             <article class="degree__title">
                 <h2>Estudios</h2>
             </article>
@@ -138,7 +140,7 @@
             </article>
         </section>
 <!-- Seccion de Habilidades -->
-        <section class="skills">
+        <section id="skills" class="skills">
             <article class="skills__title">
                 <h2>Habilidades</h2>
             </article>
@@ -229,7 +231,7 @@
             
         </section>
 <!-- Seccion de Idiomas-->
-        <section class="lang">
+        <section id="lang" class="lang">
             <article class="lang__title">
                 <h2>Idiomas</h2>
             </article>
@@ -245,7 +247,7 @@
             </article>
         </section>
 <!-- Seccion de Estudios complementarios -->
-        <section class="certification">
+        <section id="certification" class="certification">
             <article class="certification__title">
                 <h2>Estudios complementarios</h2>
             </article>
@@ -318,7 +320,7 @@
 
         </section>
 <!-- Seccion de Experiencia laboral -->
-        <section class="experience">
+        <section id="experience" class="experience">
             <!-- Titulo de experiencia -->
             <article class="experience__title">
                 <h2>Experiencia laboral</h2>
@@ -345,7 +347,7 @@
             </article>
         </section>
 <!-- Seccion de proyectos -->
-        <section id="proyects" class="main-wrapper__proyects">
+        <section id="projects" class="main-wrapper__proyects">
 
         </section>
     </main>
