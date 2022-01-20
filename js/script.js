@@ -6,6 +6,10 @@ class webActionsMenu{
     { 
         this.menuBurguer = document.getElementById("menu")
         this.closeBurguer = document.getElementById("close")
+<<<<<<< Updated upstream
+=======
+        this.menuColapsed = document.querySelector('.menu__colapsed')
+>>>>>>> Stashed changes
     }
     /**Getters y setters */
     setPositionMenu(nameClass, value){
@@ -63,6 +67,23 @@ class webActionsSlide{
     
 }
 
+<<<<<<< Updated upstream
+=======
+class webActionNavbar{
+    constructor()
+    {
+        this.header = document.querySelector('.header')
+    }
+
+    fijarNavbar()
+    {
+        this.header.style.position = 'fixed'
+        this.header.style.transition = 'all 0.5s'
+    }
+}
+
+
+>>>>>>> Stashed changes
 const   
 
     $showBoxCert = document.querySelector(".certification--view"),
@@ -90,9 +111,17 @@ else
 
 menu.menuBurguer.addEventListener('click',()=>{
     menu.setPositionMenu(".menu__colapsed", '0px')
+<<<<<<< Updated upstream
 })
 menu.closeBurguer.addEventListener('click',()=>{
     menu.setPositionMenu(".menu__colapsed", '-'+menu.getElementSize(".menu__colapsed").eHeight)
+=======
+    menu.menuColapsed.style.display = 'flex'
+})
+menu.closeBurguer.addEventListener('click',()=>{
+    menu.setPositionMenu(".menu__colapsed", '-'+menu.getElementSize(".menu__colapsed").eHeight)
+    menu.menuColapsed.style.display = 'none'
+>>>>>>> Stashed changes
 })
 
 /** Seccion de slide sobre mi **/
@@ -127,3 +156,13 @@ $showBoxCertFcc.addEventListener('click',()=>{
 $showBoxCertEngl.addEventListener('click',()=>{
     activarVentana($certInfoEngl)  
 })
+
+/** Scroll del viewPort **/
+let scrollAction = new webActionNavbar()
+window.onscroll = ()=>{
+    let y = window.scrollY;
+    if(y > 30){
+        scrollAction.fijarNavbar()
+    }
+
+}
