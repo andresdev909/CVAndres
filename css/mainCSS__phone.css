@@ -1,5 +1,13 @@
 
 /*Barra de navegacion*/
+.header
+{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background-color: white;
+    z-index: 2;
+}
 .header__menu
 {
     width: 100vw;
@@ -8,22 +16,31 @@
 }
 .menu
 {
+    position: relative;
     width: 40px;
     height: 40px;
     background-image: url(/assets/menu/menu.png);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 5px;
+    margin: 15px;
 }
 .menu__colapsed
 {
     position: absolute;
     top: -1000px;
+<<<<<<< Updated upstream
     display: flex;/*Cambio con none para ocultar y flex para ver*/
+=======
+    display: flex;
+>>>>>>> Stashed changes
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     width: 100vw;
     height: auto;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     transition: top 0.7s;
 }
 .menu__colapsed > li > a
@@ -83,28 +100,36 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    height: 400px;
+    height: 100vh;
+    background-image: url(/assets/FondoInfoPhone2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 .info__name
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
     text-align: center;
     font-size: 2rem;
     font-family: 'Lobster', cursive;
     width: 100%;
+<<<<<<< Updated upstream
     margin: 80px 20px 0 20px;
     word-wrap: break-word;
+=======
+    height: 80vh;
+>>>>>>> Stashed changes
 
 }
 .info__social
 {
-    align-self: flex-end;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
-    height: auto;
-    margin-bottom: 30px;
+    height: 20vh;
 }
 .social__item
 {
@@ -157,7 +182,7 @@
 .resume__element > h2
 {
     width: 100%;
-    color: var(--yellow);
+    color: black;
     font-size: 40px;
     font-family: 'Lobster', cursive;
     letter-spacing: 1px;
@@ -166,11 +191,11 @@
 .resume__element > p
 {
     width: calc(100vw - 40px);
-    background: var(--blue);
+    border: 3px solid #5333ED;
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
-    color: white;
+    color: black;
     text-align: justify;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
@@ -195,7 +220,7 @@
     align-items: center;
     width: 100%;
     height: 500px;
-    background-color: rgb(0, 0, 0);
+    background-color: #2CD4D9;
     margin: 40px 0px;
 }
 .about > h2
@@ -345,7 +370,7 @@
     height: 170px;
     padding: 20px;
     margin: 20px 10px;
-    background-color: white;
+    background-color: rgb(247, 247, 247); 
     border: 1px solid white;
     border-radius: 20px;
     box-shadow: -1px 8px 13px -1px rgba(0,0,0,0.73);
@@ -398,10 +423,14 @@
 {
     position: relative;
     width: 90vw;
+    height: fit-content;
     margin: 40px 10px 20px 10px;
     padding: 40px 20px 20px 20px;
-    background-color: var(--darkblue);
+    background-color: rgb(247, 247, 247); 
     border-radius: 15px;
+    -webkit-box-shadow: 1px -2px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px -2px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px -2px 14px 0px rgba(0,0,0,0.75);
 }
 .tarjet__title
 {
@@ -410,7 +439,7 @@
     left: calc(50% - (90%/2));
     width: 90%;
     background-color: white;
-    border: 2px solid black;
+    border: 3px solid #5333ED;
     border-radius: 15px;
 }
 .tarjet__title > p
@@ -427,7 +456,7 @@
 .skills__item > h3
 {
     text-align: left;
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin: 0px 0px 10px 10px;
@@ -437,6 +466,8 @@
     position: relative;
     display: flex;
     width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 .skills__item__prog, .progressVar
 {
@@ -507,7 +538,7 @@
     flex-wrap: wrap;
     width: 80vw;
     height: 120px;
-    background-color: white;
+    background-color: rgb(247, 247, 247); 
     border-radius: 10px;
     margin: 0px 20px 20px 20px;
     padding: 15px;
@@ -563,13 +594,14 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 95vw;
+    height: fit-content;
     border: 3px solid var(--darkblue);
     border-radius: 20px;
     margin: 15px 0;
 }
 .certification__title
 {
-    width: 70%;
+    width: 100%;
     margin: 20px;
 }
 .certification__title > h3
@@ -660,7 +692,7 @@
 .tarjet__info > h3
 {
     width: 100%;
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     letter-spacing: 1.5px;
@@ -668,7 +700,8 @@
 }
 .tarjet__info > p
 {
-    color: white;
+    width: 100%;
+    color: black;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-align: justify;
@@ -694,7 +727,66 @@
     text-align: left;
 }
 
+/* Seccion de rpoyectos */
+.main-wrapper__proyects
+{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project-title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.project-title > h2
+{
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.wrapper__tarjet
+{
+    width: 100%;
+    padding: 50px 0 50px 0;
+}
+.wrapper__tarjet > ul, .wrapper__tarjet > ul > a
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.wrapper__tarjet > ul > a > li
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    border: 3px solid #5333ED;
+    border-radius: 15px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+
+    transition: all 0.5s;
+}
+.wrapper__tarjet > ul > a > li:hover
+{
+    background-color: #5333ED;
+    color: white;
+    font-size: 20px;
+}
 @media (min-width: 768px) {
+    .info
+    {
+        background-image: url(/assets/FonsoTablet.jpg);
+    }
     /*Seccion de Resumen sobre mi*/
     .resume__element
     {
@@ -753,10 +845,28 @@
         width: 90vw;
         background-color: var(--crem);
     }
+<<<<<<< Updated upstream
     /*Seccion del menu*/
     .header
     {
         position: absolute;
+=======
+    /*Resumen*/
+    .resume
+    {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .resume__element {
+        min-width: auto;
+        width: 50vw;
+    }
+    /*Seccion del menu*/
+    .header
+    {
+        position: relative;
+>>>>>>> Stashed changes
         top: 0;
         width: 90vw;
     }
@@ -771,6 +881,10 @@
     .menu__colapsed
     {
         position: relative;
+<<<<<<< Updated upstream
+=======
+        display: flex;
+>>>>>>> Stashed changes
         flex-direction: row;
         justify-content: space-evenly;
         background-color: rgba(204, 201, 201, 0.911);
@@ -783,6 +897,14 @@
         padding: 10PX 18PX;
         font-size: 16px;
     }
+<<<<<<< Updated upstream
+=======
+    /*Slide*/
+    .wrap
+    {
+        max-width: 1053px;
+    }
+>>>>>>> Stashed changes
     /*Seccion de Estudios*/
     .degree__tarjet
     {
@@ -797,6 +919,14 @@
     .lang__item
     {
         width: 400px;
+<<<<<<< Updated upstream
+=======
+    }
+    /*Estudios complementarios*/
+    .certification--view, .certification--fCC, .certification--English
+    {
+        width: 340px;
+>>>>>>> Stashed changes
     }
     
 }

@@ -1,9 +1,15 @@
 :root
 {
+	/*
 	--darkblue: #22577E;
 	--blue: #5584AC;
 	--ceilblue: #95D1CC;
 	--crem: #F6F2D4;
+	*/
+	--darkblue: #2CD4D9;
+	--blue: #5584AC;
+	--ceilblue: #95D1CC;
+	--crem: white;
 }
 *{
 	margin: 0;
@@ -16,5 +22,10 @@
 }
 body
 {
+	position: relative;
 	width: 100vw;
+<<<<<<< Updated upstream
+=======
+	border: 1px solid black;
+>>>>>>> Stashed changes
 }
