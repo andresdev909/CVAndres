@@ -5,7 +5,11 @@
     position: relative;
     width: 100vw;
     height: auto;
+    margin-top: -1px;
     background-color: white;
+    -webkit-box-shadow: 0px 7px 3px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 3px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 3px -4px rgba(0,0,0,0.75);
     z-index: 2;
 }
 .header__menu
@@ -19,7 +23,7 @@
     position: relative;
     width: 40px;
     height: 40px;
-    background-image: url(/assets/menu/menu.png);
+    background-image: url(/assets/Menu/menu.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 15px;
@@ -28,19 +32,11 @@
 {
     position: absolute;
     top: -1000px;
-<<<<<<< Updated upstream
     display: flex;/*Cambio con none para ocultar y flex para ver*/
-=======
-    display: flex;
->>>>>>> Stashed changes
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    width: 100vw;
+    width: 100%;
     height: auto;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     transition: top 0.7s;
 }
 .menu__colapsed > li > a
@@ -58,16 +54,17 @@
     align-items: center;
     background-color: rgb(0, 0, 0);
     margin: 5px 10px 5px 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     height: 50px;
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
+
+    transition: all .5s;
 }
 .menu__colapsed--item:hover
 {
     background-color: white;
-    border: 2px solid black;
 }
 .last
 {
@@ -115,12 +112,10 @@
     font-size: 2rem;
     font-family: 'Lobster', cursive;
     width: 100%;
-<<<<<<< Updated upstream
     margin: 80px 20px 0 20px;
     word-wrap: break-word;
-=======
     height: 80vh;
->>>>>>> Stashed changes
+
 
 }
 .info__social
@@ -598,6 +593,11 @@
     border: 3px solid var(--darkblue);
     border-radius: 20px;
     margin: 15px 0;
+    transition: all 0.5s;
+}
+.certification--view:hover, .certification--fCC:hover, .certification--English:hover
+{
+    background-color: var(--darkblue);
 }
 .certification__title
 {
@@ -845,12 +845,11 @@
         width: 90vw;
         background-color: var(--crem);
     }
-<<<<<<< Updated upstream
     /*Seccion del menu*/
     .header
     {
         position: absolute;
-=======
+    }
     /*Resumen*/
     .resume
     {
@@ -866,7 +865,6 @@
     .header
     {
         position: relative;
->>>>>>> Stashed changes
         top: 0;
         width: 90vw;
     }
@@ -881,30 +879,24 @@
     .menu__colapsed
     {
         position: relative;
-<<<<<<< Updated upstream
-=======
         display: flex;
->>>>>>> Stashed changes
         flex-direction: row;
         justify-content: space-evenly;
-        background-color: rgba(204, 201, 201, 0.911);
+        background-color: rgba(255, 255, 255, 0.911);
     }
     .menu__colapsed > li
     {
     }
     .menu__colapsed--item
     {
-        padding: 10PX 18PX;
-        font-size: 16px;
+        padding: 5PX 18PX;
+        font-size: 15px;
     }
-<<<<<<< Updated upstream
-=======
     /*Slide*/
     .wrap
     {
         max-width: 1053px;
     }
->>>>>>> Stashed changes
     /*Seccion de Estudios*/
     .degree__tarjet
     {
@@ -919,14 +911,11 @@
     .lang__item
     {
         width: 400px;
-<<<<<<< Updated upstream
-=======
     }
     /*Estudios complementarios*/
     .certification--view, .certification--fCC, .certification--English
     {
         width: 340px;
->>>>>>> Stashed changes
     }
     
 }
